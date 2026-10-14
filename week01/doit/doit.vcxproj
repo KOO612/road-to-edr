@@ -142,6 +142,9 @@
     <ClCompile Include="doit.cpp" />
     <ClCompile Include="input_output.cpp" />
   </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="monster_class.h" />
+  </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
   </ImportGroup>
