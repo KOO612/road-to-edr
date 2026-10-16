@@ -1,4 +1,5 @@
-﻿#include <iostream>
+﻿#include <windows.h>
+#include <iostream>
 #include <string>
 #include <iterator>
 #include <array>
@@ -29,31 +30,13 @@ void monster_c::attack_special(player target_player)
 
 int main()
 {
-	player player_1;
+	SetConsoleOutputCP(CP_UTF8);
 
 	monster_a forest_monster;
 
-	monster& mon = forest_monster;
-	monster_a& mon_a = forest_monster;
+	forest_monster.show_location();
+	monster_a wood_monster(10, 25);
+	wood_monster.show_location();
 
-	monster_b tutorial_monster;
-	monster_c boss_monster;
-
-	cout << "monster attack " << endl;
-	forest_monster.attack_special(player_1);
-	tutorial_monster.attack_special(player_1);
-	boss_monster.attack_special(player_1);
-
-
-	cout << endl << "defaulst attack" << endl;
-	forest_monster.monster::attack_special(player_1);
-	tutorial_monster.monster::attack_special(player_1);
-	boss_monster.monster::attack_special(player_1);
-
-	cout << endl << "parent attack" << endl;
-	mon.attack_special(player_1);
-
-	cout << endl << "child attack" << endl;
-	mon_a.attack_special(player_1);
 	return 0;
 }
